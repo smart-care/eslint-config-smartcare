@@ -116,7 +116,13 @@ module.exports = {
   },
 
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true, parser: 'flow' }],
+    'prettier/prettier': ['error', {
+      singleQuote: true,
+      trailingComma: 'all',
+      bracketSpacing: false,
+      jsxBracketSameLine: true,
+      parser: 'flow'
+    }],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.spec.js'] }],
     'react/no-unused-prop-types': ['error', { skipShapeProps: true }],
