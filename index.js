@@ -119,9 +119,9 @@ module.exports = {
     'prettier/prettier': ['error', {
       singleQuote: true,
       trailingComma: 'all',
-      bracketSpacing: false,
+      bracketSpacing: true,
       jsxBracketSameLine: true,
-      parser: 'flow'
+      parser: 'babylon'
     }],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.spec.js'] }],
