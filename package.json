@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-smartcare",
+  "name": "@smartcare/eslint-config-smartcare",
   "version": "1.0.0",
   "description": "ESLint configuration used by Smartcare",
   "license": "BSD-3-Clause",
