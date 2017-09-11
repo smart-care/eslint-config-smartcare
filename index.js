@@ -127,5 +127,14 @@ module.exports = {
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.spec.js'] }],
     'react/no-unused-prop-types': ['error', { skipShapeProps: true }],
+    'react/sort-comp': ['error', {
+      order: [
+        'type-annotations',
+        'static-methods',
+        'lifecycle',
+        'everything-else',
+        'render',
+      ],
+    }],
   },
 };
