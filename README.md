@@ -14,6 +14,6 @@ Then create a file named `.eslintrc` with the following contents in the root fol
 
 ```js
 {
-  "extends": "smartcare"
+  "extends": "@smartcare/eslint-config-smartcare"
 }
 ```
