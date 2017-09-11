@@ -121,7 +121,7 @@ module.exports = {
       singleQuote: true,
       trailingComma: 'all',
       bracketSpacing: true,
-      jsxBracketSameLine: true,
+      jsxBracketSameLine: false,
       parser: 'babylon'
     }],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
