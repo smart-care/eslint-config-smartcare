@@ -130,6 +130,7 @@ module.exports = {
     'react/sort-comp': ['error', {
       order: [
         'type-annotations',
+        'instance-variables',
         'static-methods',
         'lifecycle',
         'everything-else',
