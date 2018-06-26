@@ -61,7 +61,7 @@ var restrictedGlobals = [
   'statusbar',
   'stop',
   'toolbar',
-  'top',
+  'top'
 ];
 
 module.exports = {
@@ -77,65 +77,67 @@ module.exports = {
     'prettier/react'
   ],
 
-  plugins: [
-    'import',
-    'flowtype',
-    'jsx-a11y',
-    'react',
-    'prettier'
-  ],
+  plugins: ['import', 'flowtype', 'jsx-a11y', 'react', 'prettier'],
 
   env: {
     browser: true,
     commonjs: true,
     es6: true,
     jest: true,
-    node: true,
+    node: true
   },
 
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
-      generators: true,
-      experimentalObjectRestSpread: true,
-    },
+      generators: true
+    }
   },
 
   settings: {
     'import/ignore': [
       'node_modules',
-      '\\.(json|css|jpg|png|gif|eot|svg|ttf|woff|woff2|mp4|webm)$',
+      '\\.(json|css|jpg|png|gif|eot|svg|ttf|woff|woff2|mp4|webm)$'
     ],
     'import/extensions': ['.js', '.jsx'],
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.json'],
-      },
-    },
+        extensions: ['.js', '.jsx', '.json']
+      }
+    }
   },
 
   rules: {
-    'prettier/prettier': ['error', {
-      singleQuote: true,
-      trailingComma: 'all',
-      bracketSpacing: true,
-      jsxBracketSameLine: false,
-      parser: 'babylon'
-    }],
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'all',
+        bracketSpacing: true,
+        jsxBracketSameLine: false,
+        parser: 'babylon'
+      }
+    ],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
-    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.spec.js'] }],
+    'react/jsx-filename-extension': [
+      'error',
+      { extensions: ['.jsx', '.spec.js'] }
+    ],
     'react/no-unused-prop-types': ['error', { skipShapeProps: true }],
-    'react/sort-comp': ['error', {
-      order: [
-        'type-annotations',
-        'instance-variables',
-        'static-methods',
-        'lifecycle',
-        'everything-else',
-        'render',
-      ],
-    }],
-  },
+    'react/sort-comp': [
+      'error',
+      {
+        order: [
+          'type-annotations',
+          'instance-variables',
+          'static-methods',
+          'lifecycle',
+          'everything-else',
+          'render'
+        ]
+      }
+    ]
+  }
 };
