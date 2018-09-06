@@ -121,6 +121,9 @@ module.exports = {
       }
     ],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
+    'react/destructuring-assignment': ['error', 'always', {
+      ignoreClassFields: true
+    }],
     'react/jsx-filename-extension': [
       'error',
       { extensions: ['.jsx', '.spec.js'] }
