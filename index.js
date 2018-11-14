@@ -61,7 +61,7 @@ var restrictedGlobals = [
   'statusbar',
   'stop',
   'toolbar',
-  'top'
+  'top',
 ];
 
 module.exports = {
@@ -74,7 +74,7 @@ module.exports = {
     'plugin:flowtype/recommended',
     'prettier',
     'prettier/flowtype',
-    'prettier/react'
+    'prettier/react',
   ],
 
   plugins: ['import', 'flowtype', 'jsx-a11y', 'react', 'prettier'],
@@ -84,7 +84,7 @@ module.exports = {
     commonjs: true,
     es6: true,
     jest: true,
-    node: true
+    node: true,
   },
 
   parserOptions: {
@@ -92,24 +92,25 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
-      generators: true
-    }
+      generators: true,
+    },
   },
 
   settings: {
     'import/ignore': [
       'node_modules',
-      '\\.(json|css|jpg|png|gif|eot|svg|ttf|woff|woff2|mp4|webm)$'
+      '\\.(json|css|jpg|png|gif|eot|svg|ttf|woff|woff2|mp4|webm)$',
     ],
     'import/extensions': ['.js', '.jsx'],
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.json']
-      }
-    }
+        extensions: ['.js', '.jsx', '.json'],
+      },
+    },
   },
 
   rules: {
+    'import/prefer-default-export': ['off'],
     'prettier/prettier': [
       'error',
       {
@@ -117,16 +118,20 @@ module.exports = {
         trailingComma: 'all',
         bracketSpacing: true,
         jsxBracketSameLine: false,
-        parser: 'babylon'
-      }
+        parser: 'babylon',
+      },
     ],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
-    'react/destructuring-assignment': ['error', 'always', {
-      ignoreClassFields: true
-    }],
+    'react/destructuring-assignment': [
+      'error',
+      'always',
+      {
+        ignoreClassFields: true,
+      },
+    ],
     'react/jsx-filename-extension': [
       'error',
-      { extensions: ['.jsx', '.spec.js'] }
+      { extensions: ['.jsx', '.spec.js'] },
     ],
     'react/no-unused-prop-types': ['error', { skipShapeProps: true }],
     'react/sort-comp': [
@@ -138,9 +143,9 @@ module.exports = {
           'static-methods',
           'lifecycle',
           'everything-else',
-          'render'
-        ]
-      }
-    ]
-  }
+          'render',
+        ],
+      },
+    ],
+  },
 };
