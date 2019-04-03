@@ -67,33 +67,32 @@ var restrictedGlobals = [
 module.exports = {
   root: true,
 
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
+
+  parserOptions: {},
 
   extends: [
     'airbnb',
-    'plugin:flowtype/recommended',
+    'plugin:@typescript-eslint/recommended',
     'prettier',
-    'prettier/flowtype',
     'prettier/react',
+    'prettier/@typescript-eslint',
   ],
 
-  plugins: ['import', 'flowtype', 'jsx-a11y', 'react', 'prettier'],
+  plugins: [
+    'import',
+    'jsx-a11y',
+    'react',
+    'react-hooks',
+    'prettier',
+    '@typescript-eslint',
+  ],
 
   env: {
     browser: true,
-    commonjs: true,
     es6: true,
     jest: true,
     node: true,
-  },
-
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-      generators: true,
-    },
   },
 
   settings: {
@@ -104,24 +103,25 @@ module.exports = {
     'import/extensions': ['.js', '.jsx'],
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
       },
     },
   },
 
   rules: {
     'import/prefer-default-export': ['off'],
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-        bracketSpacing: true,
-        jsxBracketSameLine: false,
-        parser: 'babylon',
-      },
-    ],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
+    'no-underscore-dangle': 'off',
+    'prettier/prettier': 'error',
+    // 'prettier/prettier': ['error', {
+    //   trailingComa: 'es5',
+    //   tabWidth: 2,
+    //   semi: true,
+    //   singleQuote: true,
+    //   jsxBracketSameLine: false,
+    //   bracketSpacing: true,
+    //   arrowParens: 'always'
+    // }],
     'react/destructuring-assignment': [
       'error',
       'always',
@@ -131,7 +131,7 @@ module.exports = {
     ],
     'react/jsx-filename-extension': [
       'error',
-      { extensions: ['.jsx', '.spec.js'] },
+      { extensions: ['.jsx', '.tsx', '.spec.js'] },
     ],
     'react/no-unused-prop-types': ['error', { skipShapeProps: true }],
     'react/sort-comp': [
@@ -147,5 +147,31 @@ module.exports = {
         ],
       },
     ],
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
+
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-member-accessibility': 'off',
+        'import/no-unresolved': 'off',
+      },
+    },
+    {
+      files: ['*.tsx'],
+      rules: {
+        'react/prop-types': 'off',
+      },
+    },
+  ],
 };

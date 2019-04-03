@@ -22,7 +22,7 @@ Install this package:
 yarn add --dev eslint-config-smartcare
 ```
 
-Then create a file named `.eslintrc` with the following contents in the root folder of your project:
+Then create a file named `.eslintrc.js` with the following contents in the root folder of your project:
 
 ```js
 {
