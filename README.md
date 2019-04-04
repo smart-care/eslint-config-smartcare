@@ -29,3 +29,9 @@ Then create a file named `.eslintrc.js` with the following contents in the root 
   "extends": "@smartcare/eslint-config-smartcare"
 }
 ```
+
+For the Prettier config create a file named `prettier.config.js` with the following contents in the root folder of your project:
+
+```js
+module.exports = require('@smartcare/eslint-config-smartcare/prettier.config');
+```

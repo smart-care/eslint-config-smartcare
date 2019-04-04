@@ -1,6 +1,6 @@
 {
   "name": "@smartcare/eslint-config-smartcare",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "config": {
     "access": "public"
   },
@@ -14,14 +14,17 @@
     }
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "prettier.config.js"
   ],
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-flowtype": "^3.5.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
@@ -29,5 +32,8 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "prettier": "^1.16.4",
     "typescript": "^3.3.4"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.6"
   }
 }
