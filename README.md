@@ -4,7 +4,7 @@ This package includes the shareable ESLint configuration used by Smartcare.
 
 ## Requirements
 
-To see a list of the peer dependency requires run:
+To see a list of the peer dependency requirements run:
 
 ```sh
 npm info "eslint-config-smartcare@latest" peerDependencies
