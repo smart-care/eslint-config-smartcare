@@ -54,6 +54,10 @@ module.exports = {
   },
 
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      { optionalDependencies: false, devDependencies: true },
+    ],
     'import/prefer-default-export': ['off'],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
     'no-underscore-dangle': 'off',

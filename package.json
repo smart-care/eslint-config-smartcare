@@ -1,6 +1,6 @@
 {
   "name": "@smartcare/eslint-config-smartcare",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "config": {
     "access": "public"
   },
@@ -24,7 +24,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-flowtype": "^3.5.1",
+    "eslint-plugin-flowtype": "^3.6.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
