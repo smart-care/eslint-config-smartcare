@@ -59,6 +59,12 @@ module.exports = {
   },
 
   rules: {
+    'flowtype/generic-spacing': ['off'],
+    'flowtype/space-after-type-colon': [
+      'error',
+      'always',
+      { allowLineBreak: true },
+    ],
     'import/no-extraneous-dependencies': [
       'error',
       { optionalDependencies: false, devDependencies: true },
