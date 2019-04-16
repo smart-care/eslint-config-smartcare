@@ -18,7 +18,12 @@ module.exports = {
     },
   },
 
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'plugin:flowtype/recommended',
+    'prettier',
+    'prettier/react',
+  ],
 
   plugins: [
     'import',
